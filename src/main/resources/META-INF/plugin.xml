@@ -1,11 +1,11 @@
 <idea-plugin>
-    <id>org.example.JsonSchemaToPojo</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>com.github.zawn.JsonSchema2Pojo</id>
+    <name>JsonSchema2Pojo</name>
+    <vendor email="zhangzhenli@live.com" url="http://zawn.github.io">Zawn</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    jsonschema2pojo generates Java types from JSON Schema (or example JSON) and can
+    annotate those types for data-binding with Jackson 1.x, Jackson 2.x or Gson.
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -18,5 +18,9 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action id="com.github.zawn.JsonSchema2Pojo" class="com.github.zawn.jsonschema.JsonSchema2Pojo"
+                text="JsonSchema2Pojo" description="Generate JSON Class Model">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
     </actions>
 </idea-plugin>
